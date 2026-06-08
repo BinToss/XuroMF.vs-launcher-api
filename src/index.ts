@@ -7,7 +7,7 @@ import * as dotenv from "dotenv"
 import { resolve } from "path"
 
 // ENV imports
-dotenv.config({ path: "/app/.env" })
+dotenv.config({ path: [".env", "/app/.env"] })
 
 // Database imports
 import { initializeDatabase } from "@db"
