@@ -28,7 +28,7 @@ app.use(cors())
 app.use(
   "/files/*",
   serveStatic({
-    root: resolve(__dirname, `/app/public`),
+    root: resolve(__dirname ?? import.meta.dirname, `/app/public`),
     rewriteRequestPath: (path) => {
       return path.replace(/^\/files/, "")
     }
