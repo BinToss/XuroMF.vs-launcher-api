@@ -6,8 +6,6 @@ To run this API just use this commands:
 
 ```sh
 docker build -t vslapi-docker .
-```
-
-```sh
-docker run --name vslapi -d -p <external-port>:3000 -v $(pwd)/db:/app/db -v $(pwd)/public:/app/public vslapi-docker
+set external_port 3001 # change port if necessary
+docker run --name vslapi -d -p $external_port:3000 -v $(pwd)/db:/app/db -v $(pwd)/public:/app/public vslapi-docker
 ```
