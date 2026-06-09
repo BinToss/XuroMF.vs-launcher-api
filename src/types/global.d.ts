@@ -2,7 +2,7 @@ declare global {
   type VersionType = {
     filename: string
     filesize: string
-    md5: string
+    md5: string // DevSkim: ignore DS126858
     urls: {
       cdn: string | null
       local: string | null
